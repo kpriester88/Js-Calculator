@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+	<html>
+		<head>
+			<title> Javascript Calculator </title>
+
+
+<!--Have the user provide 3 inputs, 2 numbers and the mathematical operator they would like to use
+After the inputs have been selected, have the inputs calculated 
+Create an enter button to calculate inputs and display the answer-->
+
+<script type="text/javascript">
+
+	function calc() 
+		{
+			var n1 = parseFloat(document.getElementById("n1").value);
+			var n2 = parseFloat(document.getElementById("n2").value);
+		
+			var oper = document.getElementById('operators').value;
+
+
+			if(oper === '+')
+		{
+			document.getElementById('result').value = n1+n2;
+		}
+
+			if(oper === '-'){
+			document.getElementById('result').value = n1-n2;
+		}
+
+			if(oper === 'x')
+		{
+			document.getElementById('result').value = n1*n2;
+		}
+
+			if(oper === '/')
+		{
+			document.getElementById('result').value = n1/n2;
+		}
+			
+		
+		}
+
+		
+</script>
+</head>
+
+
+<body>
+
+	<input type = "number" id = "n1">
+
+	<select id = "operators"> 
+	<option value = "+"> + </option>
+	<option value = "-"> - </option>
+	<option value = "x"> x </option>
+	<option value = "/"> / </option><br></br>
+	</select>
+
+	<input type = "number" id = "n2">
+	<button onclick="calc();"> = </button>
+    <input type="number" id = "result"/>
+
+
+</body>
+</html>
