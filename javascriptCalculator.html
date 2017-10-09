@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 	<html>
+	<link rel="stylesheet" type="text/css" href="javascriptCalculator.css">
+	<script src="javascriptCalculator.js"></script>
 		<head>
 			<title> Javascript Calculator </title>
 
@@ -9,40 +11,6 @@
 After the inputs have been selected, have the inputs calculated 
 Create an enter button to calculate inputs and display the answer-->
 
-<script type="text/javascript">
-
-	function calc() 
-		{
-			var n1 = parseFloat(document.getElementById("n1").value);
-			var n2 = parseFloat(document.getElementById("n2").value);
-		
-			var oper = document.getElementById('operators').value;
-
-
-			if(oper === '+')
-		{
-			document.getElementById('result').value = n1+n2;
-		}
-
-			if(oper === '-'){
-			document.getElementById('result').value = n1-n2;
-		}
-
-			if(oper === 'x')
-		{
-			document.getElementById('result').value = n1*n2;
-		}
-
-			if(oper === '/')
-		{
-			document.getElementById('result').value = n1/n2;
-		}
-			
-		
-		}
-
-		
-</script>
 </head>
 
 
@@ -58,7 +26,7 @@ Create an enter button to calculate inputs and display the answer-->
 	</select>
 
 	<input type = "number" id = "n2">
-	<button onclick="calc();"> = </button>
+	<button id="evaulate" onclick="calc()"> = </button>
     <input type="number" id = "result"/>
 
 
